@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at mac_rx.sv(23): object "data" differs only in case from object "DATA" in the same scope File: /home/hackathon_fpga/Desktop/hackathon_base/src/mac_rx.sv Line: 23
+Info (10281): Verilog HDL Declaration information at uart_rx.sv(25): object "DATA" differs only in case from object "data" in the same scope File: /home/hackathon_fpga/Desktop/hackathon_base/src/uart_rx.sv Line: 25
