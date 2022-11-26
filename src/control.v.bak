@@ -21,10 +21,6 @@ module control(
   output          o_uart_wvalid
 );
 
-//dbg
-wire [7:0] dbg_wdata;
-wire dbg_wvalid;
-
 task_manager task_manager(
   //  sys
   .i_clk    (i_clk),
@@ -50,9 +46,7 @@ debug_port debug_port(
   //  uart tx
   .i_wready (1),
   .o_wdata  (o_uart_wdata),
-  .o_wvalid (o_uart_wvalid),
-  .i_dbg_wdata(dbg_wdata),
-  .i_dbg_wvalid(dbg_wvalid)
+  .o_wvalid (o_uart_wvalid)
 );
 
 endmodule
