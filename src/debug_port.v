@@ -40,18 +40,18 @@ reg   [7:0]   wdata     = 0;
 reg           wvalid    = 0;
 
 always @(posedge i_clk) begin
-  if (i_rst) begin
-    state     <= 0;
-    watchdog  <= _TIME_30s;
-  end
-  else begin
-	if(i_wready) begin
-		wdata <= i_dbg_wdata;
-		wvalid <= i_dbg_wvalid;
-	end else begin
-		wvalid <= 0;
-	end
-  end
+//  if (i_rst) begin
+//    state     <= 0;
+//    watchdog  <= _TIME_30s;
+//  end
+//  else begin
+		if(i_wready) begin
+			wdata <= i_dbg_wdata;
+			wvalid <= i_dbg_wvalid;
+		end else begin
+			wvalid <= 0;
+		end
+//  end
   
 end
 

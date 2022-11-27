@@ -36,7 +36,9 @@ task_manager task_manager(
   .o_rreq   (o_eth_rreq),
   .o_wdata  (o_eth_wdata),
   .i_wready (i_eth_wready),
-  .o_wvalid (o_eth_wvalid)
+  .o_wvalid (o_eth_wvalid),
+  .o_dbg_wdata(dbg_wdata),
+  .o_dbg_wvalid(dbg_wvalid)
 );
 
 debug_port debug_port(

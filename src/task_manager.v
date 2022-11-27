@@ -26,36 +26,36 @@ reg           send     = 0;
 
 
 always @(posedge i_clk) begin
-  if (i_rst) begin
-//    link  <= 0;
-//    send  <= 0;
-    state <= IDLE;
-  end
-  else begin
-    case (state)
-      IDLE: begin
-//        link <= 0;
-        if  (done) begin
-//          send  <=  1;
-          state <= CONNECTED;
-        end
-      end
-      CONNECTED: begin
-        if (done)
-          state <= LINKED;
-        else
-          send  <=  0;
-      end
-      LINKED: begin
-        if (done) begin
-//          link  <= 0;
-//          send  <= 1;
-          state <= CONNECTED;
-        end
-//          link <= 1; // change to 1 to enable MHP protocol ethertype usage
-      end
-    endcase
-  end
+//  if (i_rst) begin
+////    link  <= 0;
+////    send  <= 0;
+//    state <= IDLE;
+//  end
+//  else begin
+//    case (state)
+//      IDLE: begin
+////        link <= 0;
+//        if  (done) begin
+////          send  <=  1;
+//          state <= CONNECTED;
+//        end
+//      end
+//      CONNECTED: begin
+//        if (done)
+//          state <= LINKED;
+//        else
+//          send  <=  0;
+//      end
+//      LINKED: begin
+//        if (done) begin
+////          link  <= 0;
+////          send  <= 1;
+//          state <= CONNECTED;
+//        end
+////          link <= 1; // change to 1 to enable MHP protocol ethertype usage
+//      end
+//    endcase
+//  end
 end
 
 mhp protocol(
